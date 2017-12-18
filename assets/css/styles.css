@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+
+.jumbotron {
+    background-image: url("../images/Fairy_Forest.jpg");
+    background-position: center;
+    
+    color: white;
+}
+
+hr {
+    border-color: rgb(248, 253, 200);
+}
+
+.creature {
+    margin: 2px 2px 2px 2px;
+}
+
+
+.gif {
+    width: 300px;
+    margin: auto;
+}
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    /* width: 33%; */
+    border-color: black;
+}
+
+.card-text {
+    text-align: center;
+    text-transform: uppercase;
+}
+.gifViewport{
+margin: auto;
+}
+

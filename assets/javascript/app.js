@@ -1,5 +1,3 @@
-// ----- VARIABLES --------------------------------
-
 let topics = [
   "unicorn",
   "dragon",
@@ -16,7 +14,6 @@ let topics = [
   "mermaid"
 ];
 
-// ------- FUNCTIONS ---------------------
 // create buttons---------
 //   for each value in the array
 function showButtons() {
@@ -39,7 +36,6 @@ function showButtons() {
 // show initial button layout
 showButtons();
 
-// ----- METHODS -----------------------------
 // Add creature button --------------
 $("#go").on("click", event => {
   // prevent form from submitting so that the page does not refresh
@@ -56,8 +52,6 @@ $("#go").on("click", event => {
 
   //  HELP reset input text field
 });
-
-// GIFS ------
 
 function showGIFs() {
   // empty so we do not keep adding gifs
@@ -85,17 +79,16 @@ function showGIFs() {
     let gifUrl = response.data;
     for (let i = 0; i < gifUrl.length; i++) {
       $(".gifViewport").append(
-        `<div class="block">
-            <img class="gif" src="${
-              gifUrl[i].images.original_still.url
-            }" alt="creature gif" playGIF="${
-          gifUrl[i].images.original.url
-        }" pauseGIF="${
+        `<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="${
+    gifUrl[i].images.original_still.url
+  }" alt="creature gif" playGIF="${gifUrl[i].images.original.url}" pauseGIF="${
           gifUrl[i].images.original_still.url
-        }" gifStatus="paused" >
-            <hr>
-            <p class="rating">Rating: ${gifUrl[i].rating}</p>
-        </div>`
+        }" gifStatus="paused" image cap">
+  <div class="card-body">
+    <p class="card-text">Rating: ${gifUrl[i].rating}</p>
+  </div>
+</div>`
       );
     }
   });
